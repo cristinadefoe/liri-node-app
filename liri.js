@@ -17,8 +17,9 @@ var request = require("request");
 var fs = require("fs");
 
 // Save userAction in variable
+// node liri [my-tweets(becomes userAction)]
 var userAction = process.argv[2];
-//node liri [my-tweets(becomes userAction)]
+
 // Title of song or movie
 var userTitle = process.argv[3];
 
@@ -26,6 +27,7 @@ var getTweets = function () {
 
     var client = new Twitter(keys.twitterKeys);
 
+    // NPM package for Twitter
     var params = { screen_name: 'crisdef12' };
     client.get('statuses/user_timeline', params, function (error, tweets, response) {
         if (!error) {
@@ -47,10 +49,12 @@ var getSpotify = function (songName) {
 
     var spotify = new Spotify(keys.spotifyKeys);
 
+    // NPM package node-spotify-API
     spotify.search({ type: 'track', query: songName }, function (err, data) {
         if (err) {
             return console.log('Error occurred: ' + err);
         }
+
         // console.log(JSON.stringify(data, null, 2))
         var songs = data.tracks.items[0];
 
@@ -108,25 +112,25 @@ var getMovies = function (movieName) {
 
 var doThat = function () {
 
-    // This block of code will read from the "movies.txt" file.
-    // It's important to include the "utf8" parameter or the code will provide stream data (garbage)
-    // The code will store the contents of the reading inside the variable "data"
+    // Read from "random.txt" file
+    // Include "utf8" parameter or the code will provide garbage
+    // Code will store the contents of the reading inside the variable "data"
     fs.readFile("random.txt", "utf8", function (error, data) {
 
-        // If the code experiences any errors it will log the error to the console.
+        // If code experiences any errors it will log the error to console
         if (error) {
             return console.log(error);
         }
 
-        // We will then print the contents of data
+        // Print the contents of data
         console.log(data);
 
-        // Then split it by commas (to make it more readable)
+        // Split by commas (to make it more readable)
         // .split converts string into array
         // .join converts array into string
         var dataArr = data.split(", ");
 
-        // We will then re-display the content as an array for later use.
+        // Re-display the content as an array for later use.
         console.log(dataArr);
 
         // Show indexes of an array
@@ -138,6 +142,7 @@ var doThat = function () {
 
 }
 
+// Switch statement to getTweets, getSpotify, getMovies and doThat
 var pick = function (caseData, functionData) {
     switch (caseData) {
         case "my-tweets":
