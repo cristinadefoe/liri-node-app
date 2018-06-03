@@ -42,7 +42,6 @@ var getTweets = function () {
             }
         }
     });
-
 }
 
 var getSpotify = function (songName) {

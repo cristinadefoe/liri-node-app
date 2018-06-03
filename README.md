@@ -1,74 +1,58 @@
-# Project Name: liri-node-app
+# LIRI Bot: Node.js Homework #8
 
-### Description: This is a LIRI application (Language Interpretation and Recognition Interface) which allows the user to use the command line node app that accepts the values of certain parameters and returns data. For instance, a user ca run node liri.js and include the following commands and it will output the data related to the user's request.
+This is a LIRI application (Language Interpretation and Recognition Interface) which allows the user to use the command line node app that accepts the values of certain parameters and returns data. For instance, a user ca run node liri.js and include the following commands and it will output the data related to the user's request.
 
-    * `my-tweets`
+    - `my-tweets`, `spotify-this-song`, `movie-this`, `do-what-it-says`
 
-    * `spotify-this-song`
+## Getting Started
 
-    * `movie-this`
+Create your own Spotify and API keys and replace it with the information in the file called `.env`. 
+#### Spotify API keys
 
-    * `do-what-it-says`
+SPOTIFY_ID=your-spotify-id
+SPOTIFY_SECRET=your-spotify-secret
+#### Twitter API keys
 
-### How to Use the App:
+TWITTER_CONSUMER_KEY=your-twitter-consumer-key
+TWITTER_CONSUMER_SECRET=your-twitter-consumer-secret
+TWITTER_ACCESS_TOKEN_KEY=your-access-token-key
+TWITTER_ACCESS_TOKEN_SECRET=your-twitter-access-token-secret
 
-### NOTE: INSTRUCTIONS BELOW HAS BEEN COPIED FROM "# LIRI Bot" README.md homework instructions.
+### NPM Installations
 
-### From the command line type in the following:
+Navigate to the root of your project. Then in the terminal command line run `npm init`, this will initalize a `package.json` for your project. Include the following NPM installations, `npm dotenv`, `npm node-spotify-api`, `npm request`, `npm twitter`.
 
-1. `node liri.js my-tweets`
+## Deployment 
 
-   ..* This will show last 20 tweets and when they were created in your terminal/bash window.
-    
-    Screenshot path for my-tweets: 
+To see LIRI Bot in action, run the following in your command line:
+
+`node liri.js my-tweets`
+
+   * This will show the last 20 tweets and when they were created in your terminal/bash window.
+#### Screenshot
    
-<img width="1280" alt="twitter" src="https://user-images.githubusercontent.com/35505038/40379196-c833210c-5db2-11e8-806c-ce6de60240aa.png">
+![screen shot 2018-06-03 at 11 47 32 am](https://user-images.githubusercontent.com/35505038/40889456-5cb25d32-6724-11e8-880c-11c73aa8c666.png)
 
+`node liri.js spotify-this-song '<song name here>'`
 
-2. `node liri.js spotify-this-song '<song name here>'`
+   * This will show the artist(s), song's name, preview link of the song from Spotify, album song is from; in your terminal/bash window
 
-   ..* This will show the following information about the song in your terminal/bash window
-     
-     * Artist(s)
+   * If no song is given, it will default to "The Sign" by Ace of Base.
 
-     * The song's name
-     
-     * A preview link of the song from Spotify
-     
-     * The album that the song is from
-
-    * If no song is provided then your program will default to "The Sign" by Ace of Base.
-
-    Screenshot path for spotify-this-song: 
+#### Screenshot
     
-<img width="1280" alt="spotify-this-song" src="https://user-images.githubusercontent.com/35505038/40379203-cc269564-5db2-11e8-89fe-05ebbc633d73.png">
+![screen shot 2018-06-03 at 12 05 45 pm](https://user-images.githubusercontent.com/35505038/40889595-8d98556c-6726-11e8-9a36-2e1a09a73be5.png)
 
+ `node liri.js movie-this '<movie name here>'`
 
-3. `node liri.js movie-this '<movie name here>'`
-
-   ..* This will output the following information to your terminal/bash window
-
-    * Title of the movie.
-
-    * Year the movie came out.
-
-    * IMDB Rating of the movie.
-
-    * Rotten Tomatoes Rating of the movie.
-
-    * Country where the movie was produced.
-
-    * Language of the movie.
-
-    * Plot of the movie.
-
-    * Actors in the movie.
+   * This will show title of the movie, year movie was released, IMDB Rating, Rotten Tomatoes Rating, country movie was made, language, plot, actors; to your terminal/bash window
 
     * If the user doesn't type a movie in, the program will output data for the movie 'Mr. Nobody.'
 
-   Screenshot path for movie-this:
+#### Screenshot
    
-<img width="1280" alt="movie-this" src="https://user-images.githubusercontent.com/35505038/40379207-ceefea0c-5db2-11e8-9e5a-025355e3cf90.png">
+![screen shot 2018-06-03 at 12 16 19 pm](https://user-images.githubusercontent.com/35505038/40889654-fc0c6276-6727-11e8-8eda-9fdd780d1c9e.png)
+
 
 4. `node liri.js do-what-it-says`
    
@@ -79,11 +63,23 @@
    Screenshot path for do-what-it-says: 
    
    <img width="1280" alt="do-what-it-says" src="https://user-images.githubusercontent.com/35505038/40379212-d21e9ff2-5db2-11e8-928d-8e718af27b83.png">
-   
-     
-Built With: Javascript, node.js
 
-Author: Cristina Defoe
+## Built With
 
-Acknowledgments: Thanks to anyone's code that was used as inspiration.
+* Visual Studio Code (https://code.visualstudio.com) - Text editor
+* Javascript 
+* Node.js (https://nodejs.org/en/) - Framework used
+* JSON (http://www.json.org) - Data format used
+* Twitter API  - API 
+* Spotify API  - API for music 
+* OMDB API - API for movies 
 
+## Author
+
+* **Cristina Defoe** - (https://github.com/cristinadefoe)
+
+## Acknowledgments
+
+* Thanks to anyone's code that was used as inspiration.
+
+* Instructions copied from "LIRI Bot" README.md homework.
