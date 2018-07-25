@@ -1,6 +1,6 @@
-# LIRI-Node-App: Node.js Homework #8
+# LIRI-Node-App
 
-This is a LIRI application (Language Interpretation and Recognition Interface) which allows the user to use the command line node app that accepts the values of certain parameters and returns data. For instance, a user ca run node liri.js and include the following commands and it will output the data related to the user's request.
+This is a LIRI application (Language Interpretation and Recognition Interface) which allows the user to use the command line node app that accepts the values of certain parameters and returns data. For instance, a user can run node liri.js and include the following command and it will output the data related to the user's request.
 
     - `my-tweets`
     - `spotify-this-song`
@@ -10,10 +10,12 @@ This is a LIRI application (Language Interpretation and Recognition Interface) w
 ## Getting Started
 
 Create your own Spotify and API keys and replace it with the information in the file called `.env`. 
+
 #### Spotify API keys
 
 SPOTIFY_ID=your-spotify-id
 SPOTIFY_SECRET=your-spotify-secret
+
 #### Twitter API keys
 
 TWITTER_CONSUMER_KEY=your-twitter-consumer-key
@@ -34,13 +36,14 @@ To see LIRI Bot in action, run the following in your command line:
 `node liri.js my-tweets`
 
    * This will show the last 20 tweets and when they were created in your terminal/bash window.
+
 #### Screenshot
    
 ![screen shot 2018-06-03 at 11 47 32 am](https://user-images.githubusercontent.com/35505038/40889456-5cb25d32-6724-11e8-880c-11c73aa8c666.png)
 
 `node liri.js spotify-this-song '<song name here>'`
 
-   * This will show the artist(s), song's name, preview link of the song from Spotify, album song is from; in your terminal/bash window
+   * This will show the artist, name of song, preview link of the song from Spotify, album song is from in your terminal/bash window
 
 #### Screenshot
     
@@ -48,7 +51,7 @@ To see LIRI Bot in action, run the following in your command line:
 
  `node liri.js movie-this '<movie name here>'`
 
-   * This will show title of the movie, year movie was released, IMDB Rating, Rotten Tomatoes Rating, country movie was made, language, plot, actors; to your terminal/bash window
+   * This will show title of the movie, year movie was released, IMDB Rating, Rotten Tomatoes Rating, country movie was made, language, plot, actors in your terminal/bash window
 
 #### Screenshot
    
